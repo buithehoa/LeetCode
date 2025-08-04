@@ -8,7 +8,7 @@ public class ContainerWithMostWater {
         int left = 0;
         int right = height.length - 1;
         int maxArea = 0;
-        int tmpMaxArea = 0;
+        int tmpMaxArea;
         boolean continued = true;
 
         while (continued) {
