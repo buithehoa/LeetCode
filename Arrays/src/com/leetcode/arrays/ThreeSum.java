@@ -15,14 +15,15 @@ public class ThreeSum {
         boolean continued;
         int left, right, sum;
         List<Integer> triplet;
-        int lastIndex = nums.length - 1;
+        int length = nums.length;
 
-        for (int i = 0; i < nums.length - 2; i++) {
-            continued = true;
+        for (int i = 0; i < length - 2; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+
             left = i + 1;
-            right = lastIndex;
+            right = length - 1;
 
-            while (continued) {
+            while (left < right) {
                 sum = nums[i] + nums[left] + nums[right];
 
                 if (sum > 0) {
@@ -30,13 +31,9 @@ public class ThreeSum {
                 } else if (sum < 0) {
                     left++;
                 } else {
-                    triplet = Arrays.asList(nums[i], nums[left], nums[right]);
-                    if (! triplets.contains(triplet)) triplets.add(triplet);
-
+                    triplets.add(Arrays.asList(nums[i], nums[left], nums[right]));
                     left++;
                 }
-
-                if (left == right) continued = false;
             }
         }
 
