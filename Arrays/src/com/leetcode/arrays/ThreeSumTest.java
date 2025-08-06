@@ -18,6 +18,10 @@ public class ThreeSumTest {
         int[] nums = {-1, 0, 1, 2, -1, -4};
         List<List<Integer>> actual = solution.threeSum(nums);
 
+        System.out.println(actual);
+        System.out.println(expected);
+
+        assertEquals(actual.size(), expected.size());
         assertTrue(expected.containsAll(actual) && actual.containsAll(expected));
     }
 

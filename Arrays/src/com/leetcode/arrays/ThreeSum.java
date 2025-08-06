@@ -13,6 +13,7 @@ public class ThreeSum {
         Arrays.sort(nums);
 
         int left, right, sum;
+        List<Integer> triplet;
         for (int i = 0; i < nums.length - 2; i++) {
             boolean continued = true;
             left = i + 1;
@@ -26,7 +27,9 @@ public class ThreeSum {
                 } else if (sum < 0) {
                     left++;
                 } else {
-                    triplets.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                    triplet = Arrays.asList(nums[i], nums[left], nums[right]);
+                    if (! triplets.contains(triplet)) triplets.add(triplet);
+
                     left++;
                 }
 
