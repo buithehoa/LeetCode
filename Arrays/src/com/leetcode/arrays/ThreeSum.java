@@ -12,9 +12,7 @@ public class ThreeSum {
         List<List<Integer>> triplets = new ArrayList<>();
         Arrays.sort(nums);
 
-        boolean continued;
         int left, right, sum;
-        List<Integer> triplet;
         int length = nums.length;
 
         for (int i = 0; i < length - 2; i++) {
