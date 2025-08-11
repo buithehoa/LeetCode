@@ -9,10 +9,10 @@ class NextPermutationTest {
     @Test
     void nextPermutation_wrongAnswer_returnNextPermutation() {
         NextPermutation solution = new NextPermutation();
-        int[] nums = {1, 3, 2};
+        int[] nums = {4,2,0,2,3,2,0};
         solution.nextPermutation(nums);
 
-        assertArrayEquals(new int[] {2, 1, 3}, nums);
+        assertArrayEquals(new int[] {4,2,0,3,0,2,2}, nums);
     }
 
     @Test
