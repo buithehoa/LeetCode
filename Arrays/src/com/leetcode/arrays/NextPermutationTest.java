@@ -7,6 +7,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class NextPermutationTest {
 
     @Test
+    void nextPermutation_wrongAnswer_returnNextPermutation() {
+        NextPermutation solution = new NextPermutation();
+        int[] nums = {1, 3, 2};
+        solution.nextPermutation(nums);
+
+        assertArrayEquals(new int[] {2, 1, 3}, nums);
+    }
+
+    @Test
     void nextPermutation_ascendingArray_returnNextPermutation() {
         NextPermutation solution = new NextPermutation();
         int[] nums = {1, 2, 3, 4};

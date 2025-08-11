@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class NextPermutation {
     public void nextPermutation(int[] nums) {
-
         outerLoop:
         for (int i = nums.length - 1; i >= 0; i--) {
             if (i == 0) {
@@ -18,7 +17,7 @@ public class NextPermutation {
                     nums[j] = nums[i];
                     nums[i] = tmp;
 
-                    Arrays.sort(nums, j, nums.length - 1);
+                    Arrays.sort(nums, j + 1, nums.length);
                     break outerLoop;
                 }
             }
