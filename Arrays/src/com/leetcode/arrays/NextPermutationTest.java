@@ -1,6 +1,9 @@
 package com.leetcode.arrays;
 
 import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.util.CollectionUtils;
+
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
