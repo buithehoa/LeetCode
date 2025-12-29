@@ -1,4 +1,4 @@
-require_relative '../lib/merge_strings_alternately'
+require_relative '../../lib/two_pointers/merge_strings_alternately'
 
 RSpec.describe 'merge_alternately' do
   it 'returns correct indices' do
