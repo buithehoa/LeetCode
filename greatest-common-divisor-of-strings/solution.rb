@@ -9,6 +9,8 @@ def gcd_of_strings(str1, str2)
     str.each_char do |c|
       divisor += c
 
+      next if (str1.length % divisor.length != 0 || str2.length % divisor.length != 0)
+
       is_divisor1 = str1 == divisor * (str1.length / divisor.length)
       is_divisor2 = str2 == divisor * (str2.length / divisor.length)
 
